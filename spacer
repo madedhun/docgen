@@ -2,8 +2,9 @@
 
 
 
-˘˘˘vb
+```vb
 if maz(2) like "T*" then
 msgbox ("helló")
 end if
-ˇ˘˘
+```
+
