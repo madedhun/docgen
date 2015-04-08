@@ -1,3 +1,6 @@
+//generate doc from a form in html
+
+```
 Option Compare Database
 Dim mez() As String
 
@@ -2101,4 +2104,6 @@ Function ReportFileStatus(filespec) As Boolean 'létezik-e a fájl funció
    End If
 
 End Function
+```
+
 
