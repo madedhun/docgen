@@ -1,6 +1,6 @@
 //generate doc from a form in html
 
-```
+```Visual Basic
 Option Compare Database
 Dim mez() As String
 
