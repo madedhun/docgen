@@ -1,1 +1,2104 @@
+Option Compare Database
+Dim mez() As String
+
+Dim intdatum As String
+
+
+Dim i As Integer
+
+
+
+Sub adatkeroalaplevel_Click()
+
+Dim fso As Object
+Set fso = CreateObject("Scripting.FileSystemObject")
+
+If ReportFileStatus("d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\" & mez(1) & "-2015_adatkeroalaplevel.html") = True Then 'achtung!!  nem jó a helye
+
+
+
+' A Msgbox és a feltétel az ismétlés ellen
+MsgBox ("A " & mez(1) & "/2015." & Chr$(13) & mez(3) & " ügyében ilyet csináltál!!!")
+Else
+
+Dim file As Object
+Set file = fso.CreateTextFile("d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\" & mez(1) & "-2015_adatkeroalaplevel.html") 'achtung!!  nem jó a helye
+file.WriteLine "<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN"" > "
+file.WriteLine "<HTML>"
+file.WriteLine "<HEAD>"
+file.WriteLine "    <META HTTP-EQUIV=""CONTENT-TYPE"" CONTENT=""text/html; charset=windows-1250"">"
+file.WriteLine "    <TITLE></TITLE>"
+file.WriteLine "    <META NAME=""GENERATOR"" CONTENT=""LibreOffice 3.6  (Windows)"">"
+file.WriteLine "    <META NAME=""CHANGED"" CONTENT=""20150326;13250776"">"
+file.WriteLine "     <META NAME=""Információ 1"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 2"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 3"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 4"" CONTENT="""">"
+file.WriteLine "     <STYLE TYPE=""text/css"">"
+file.WriteLine "     <!--"
+file.WriteLine "         @page { margin-left: 2cm; margin-right: 2cm; margin-top: 2.5cm; margin-bottom: 2cm }"
+file.WriteLine "         @page:first { margin-top: 2cm; margin-bottom: 2.5cm }"
+file.WriteLine "         P { margin-right: 0.5cm; margin-bottom: 0.21cm; direction: ltr; color: #000000; widows: 0; orphans: 0 }"
+file.WriteLine "         P.western { font-family: ""Times New Roman"", serif; font-size: 12pt; so-language: hu-HU }"
+file.WriteLine "         P.cjk { font-family: ""SimSun""; font-size: 12pt; so-language: zh-CN }"
+file.WriteLine "         P.ctl { font-family: ""Mangal""; font-size: 12pt; so-language: hi-IN }"
+file.WriteLine "     -->"
+file.WriteLine "     </STYLE>"
+file.WriteLine " </HEAD>"
+file.WriteLine " <BODY LANG=""hu-HU"" TEXT=""#000000"" DIR=""LTR""><SPAN CLASS=""sd-abs-pos"" STYLE=""position: absolute; top: 1.79cm; left: 2.07cm; width: 639px"">"
+'kép helye
+file.WriteLine " <IMG SRC=""file:///D:/fejlec.png"" NAME=""kép1"" WIDTH=639  HEIGHT=150 BORDER=0></SPAN>"
+file.WriteLine " <P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm; font-variant: small-caps"">"
+file.WriteLine " <BR>"
+'címzés ügyszám
+file.WriteLine "</DIV>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "<BR><BR><BR><BR><BR><BR><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>T.C."
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>" & mez(1) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>/2015.</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR><BR><BR>"
+file.WriteLine "</P><BR><BR>"
+
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>" & mez(12) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B><SPAN STYLE=""background: #ffff00"">nak/nek</SPAN></B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>,"
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B><SPAN STYLE=""background: #ffff00"">a(z)</SPAN></B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>" & mez(3) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>"
+file.WriteLine "</B></FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>képviselőjének</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><U><B>" & mez(9) & "</B></U></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>" & mez(10) & "</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>" & mez(11) & "</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">Tisztelt"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><SPAN STYLE=""background: #ffff00"">" & mez(12) & "!</SPAN></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Az"
+file.WriteLine "egyesülési jogról, a közhasznú jogállásról, valamint a civil"
+file.WriteLine "szervezetek működéséről és támogatásáról szóló 2011. évi CLXXV."
+file.WriteLine "törvény (a továbbiakban: Ectv.) 11.&sect;-a szerint a civil szervezet"
+file.WriteLine "működése felett az ügyészség az ügyészségről szóló törvény"
+file.WriteLine "rendelkezései szerint törvényességi ellenőrzést gyakorol. </FONT><BR>"
+
+'változó rész mert egyesület vagy alapítvány
+If mez(4) Like "T*" Then 'egyesület
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>A"
+file.WriteLine "bíróság értesítése szerint az egyesület a beszámoló és a"
+file.WriteLine "közhasznúsági melléklettel kapcsolatos Ectv. 30.&sect; (1)-(3)"
+file.WriteLine "bekezdésében előírt letétbe helyezési kötelezettségének nem tett"
+file.WriteLine "eleget.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>A"
+file.WriteLine "fentiekre és arra tekintettel, hogy Ön az egyesület törvényszéken"
+file.WriteLine "nyilvántartott képviselője, kérem, hogy a vizsgálat lefolytatása"
+file.WriteLine "céljából szíveskedjen az alábbiakra nyilatkozni és a vonatkozó"
+file.WriteLine "iratokat 15 napon belül a főügyészségnek megküldeni: </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;az"
+file.WriteLine "alapszabály és annak módosításai;</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;rendelkezik-e"
+file.WriteLine "az egyesület a jóváhagyásra jogosult testületi szerv által elfogadott"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2012."
+file.WriteLine "évre vonatkozó beszámolóval, közhasznúsági melléklettel, ha igen, </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;kérem"
+file.WriteLine "a beszámolónak, </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;a"
+file.WriteLine "közhasznúsági mellékletnek, valamint </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;az"
+file.WriteLine "azokat elfogadó testületi szerv ülése jegyzőkönyvének, </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;jelenléti"
+file.WriteLine "ívének megküldését;</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;az"
+file.WriteLine "egyesület rendelkezik-e saját honlappal, annak mi az elérhetősége;</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;a"
+file.WriteLine "beszámolót, a közhasznúsági mellékletet az egyesület honlapján"
+file.WriteLine "közzétették-e;</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;jelenleg"
+file.WriteLine "működik-e az egyesület. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Kérem,"
+file.WriteLine "hogy amennyiben valamelyik kért működési irat hiányzik, ennek"
+file.WriteLine "tényéről nyilatkozzon válaszlevélben. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Tájékoztatom,"
+file.WriteLine "hogy az Ectv. 11.&sect; (5) bekezdése szerint a bíróság az ügyész"
+file.WriteLine "keresete alapján megállapítja az egyesület megszűnését, ha</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><I>aa)</I></FONT>"
+file.WriteLine "<FONT SIZE=3>határozott időre jött létre és a meghatározott időtartam"
+file.WriteLine "eltelt (Polgári Törvénykönyvről szóló 2013. évi V. törvény (Ptk.)"
+file.WriteLine "3:48.&sect; (1) bekezdés a) pont);</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><I>ab)</I></FONT>"
+file.WriteLine "<FONT SIZE=3>megszűnése feltétel bekövetkezéséhez kötött és e"
+file.WriteLine "feltétel bekövetkezett (Ptk. 3:48.&sect; (1) bekezdés b) pont);</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><I>ac)"
+file.WriteLine "</I></FONT><FONT SIZE=3>megvalósította célját vagy céljának"
+file.WriteLine "megvalósítása lehetetlenné vált, és új célt nem határoztak meg (Ptk."
+file.WriteLine "3:84.&sect; a) pont);</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><I>ad)</I></FONT>"
+file.WriteLine "<FONT SIZE=3>a tagjainak száma hat hónapon keresztül a törvényben"
+file.WriteLine "meghatározott legkisebb létszám &ndash; 10 fő &ndash; alá csökken"
+file.WriteLine "(Ptk. 3:84.&sect; b) pont) feltéve, hogy az </FONT><FONT SIZE=3><I>aa)-ac)</I></FONT>"
+file.WriteLine "<FONT SIZE=3>pont szerinti esetekben az abban foglaltakra figyelemmel"
+file.WriteLine "az egyesület nem határozott a megszűnéséről.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>A"
+file.WriteLine "rendelkezésre álló adatok szerint nem állapítható meg, hogy az"
+file.WriteLine "egyesület a Ptk.-ban foglalt bármely okból megszűnt volna. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Ha"
+file.WriteLine "az egyesület </FONT><FONT SIZE=3><U>nem működik </U></FONT><FONT SIZE=3>és"
+file.WriteLine "a megszűnéséről határozni nem képes, szíveskedjen 15 napon belül"
+file.WriteLine "nyilatkozni, hogy:</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Az"
+file.WriteLine "egyesület megvalósította célját vagy céljának megvalósítása"
+file.WriteLine "lehetetlenné vált és új &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;célt nem határoztak meg, az egyesület a"
+file.WriteLine "céljának elérése érdekében feladatát milyen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;okok miatt nem tudja"
+file.WriteLine "ellátni jelenleg és a jövőben sem?</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Az"
+file.WriteLine "egyesület legutóbbi közgyűlését mikor tartotta?</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;A"
+file.WriteLine "vezető szervei (elnökség) mióta nem üléseznek?</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Az"
+file.WriteLine "elmúlt két évben konkrétan milyen tevékenységet végzett az egyesület,"
+file.WriteLine "illetőleg &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mióta nem fejt ki tevékenységet? </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Tagdíjat"
+file.WriteLine "szednek-e, illetve azt a tagok befizetik-e határidőben?</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;A"
+file.WriteLine "taglétszám eléri-e a törvényben előírt minimumot (10 fő), illetőleg"
+file.WriteLine "mikortól csökkent &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 fő alá a taglétszám? Jelenleg hány"
+file.WriteLine "nyilvántartott tagja van az egyesületnek? </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Van-e"
+file.WriteLine "az egyesületnek bankszámlája és adószáma? </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Van-e"
+file.WriteLine "az egyesületnek ingó-, ingatlan vagyona, követelése, tartozása és"
+file.WriteLine "azok összege? </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Kéri-e,"
+file.WriteLine "hogy az ügyészség indítson keresetet az egyesület megszűnésének"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;megállapítása iránt? </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Kérem,"
+file.WriteLine "hogy amennyiben az egyesület utolsó közgyűlésének jegyzőkönyve,"
+file.WriteLine "legutóbbi pénzügyi (számviteli) beszámolója, illetve bankszámla"
+file.WriteLine "kivonata vagy a bankszámla megszüntetésére vonatkozó iratok Önnél"
+file.WriteLine "fellelhetők, azok másolatát nyilatkozatával együtt szíveskedjék"
+file.WriteLine "megküldeni a főügyészségnek. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>(Levelezési"
+file.WriteLine "cím: Pest Megyei Főügyészség, 1592 Budapest, Pf. 600.)</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Felhívom"
+file.WriteLine "a figyelmét, hogy az ügyészségről szóló 2011. évi CLXIII. törvény"
+file.WriteLine "(Ütv.) 4.&sect; (3) bekezdése alapján adatok és iratok szolgáltatása"
+file.WriteLine "érdekében az ügyész</FONT> &ndash; <FONT SIZE=3>többek között &ndash;"
+file.WriteLine "a civil szervezetet megkeresheti, a megkeresett szerv vezetője a"
+file.WriteLine "megkeresésnek az ügyész által megjelölt határidőben köteles eleget"
+file.WriteLine "tenni.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Amennyiben"
+file.WriteLine "az iratok, illetve nyilatkozatának megküldése akadályba ütközik,"
+file.WriteLine "kérem azt a fenti telefonszámon haladéktalanul közölje.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+
+
+
+
+Else 'alapítvány
+
+
+
+End If
+
+
+
+
+
+
+
+
+
+
+
+
+'keltezés
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal"">"
+file.WriteLine "<FONT SIZE=2 STYLE=""font-size: 11pt"">Budapest, " & intdatum & " napján</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal"">"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=2 STYLE=""font-size: 11pt"">dr."
+file.WriteLine "Papp Dániel</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal"">"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+file.WriteLine "<FONT SIZE=2 STYLE=""font-size: 11pt"">főügyészségi ügyészségi"
+file.WriteLine "megbízott</FONT></P>"
+
+
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>L.i.:</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">Kiadni:"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">1-II."
+file.WriteLine "sz. int.</FONT><FONT SIZE=3 STYLE=""font-size: 11pt""> 1 pld-át"
+file.WriteLine "címnek, </FONT><FONT SIZE=3 STYLE=""font-size: 11pt""></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>"
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B></B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""> </FONT></P>"
+file.WriteLine "<DIV TYPE=FOOTER>"
+file.WriteLine "    <P STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "    </P>"
+file.WriteLine "</DIV>"
+file.WriteLine "</BODY>"
+file.WriteLine "</HTML>"
+
+
+
+
+
+file.Close
+
+
+Set fso = Nothing
+Set file = Nothing
+End If
+End Sub
+
+
+
+Sub adatkerolevelszekhely_Click()
+
+Dim fso As Object
+Set fso = CreateObject("Scripting.FileSystemObject")
+
+If ReportFileStatus("d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\" & mez(1) & "-2015_adatkero_szekhelyes.html") = True Then 'achtung!!  nem jó a helye
+
+
+
+' A Msgbox és a feltétel az ismétlés ellen
+MsgBox ("A " & mez(1) & "/2015." & Chr$(13) & mez(3) & " ügyében ilyet csináltál!!!")
+Else
+
+Dim file As Object
+Set file = fso.CreateTextFile("d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\" & mez(1) & "-2015_adatkero_szekhelyes.html") 'achtung!!  nem jó a helye
+file.WriteLine "<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN"" > "
+file.WriteLine "<HTML>"
+file.WriteLine "<HEAD>"
+file.WriteLine "    <META HTTP-EQUIV=""CONTENT-TYPE"" CONTENT=""text/html; charset=windows-1250"">"
+file.WriteLine "    <TITLE></TITLE>"
+file.WriteLine "    <META NAME=""GENERATOR"" CONTENT=""LibreOffice 3.6  (Windows)"">"
+file.WriteLine "    <META NAME=""CHANGED"" CONTENT=""20150326;13250776"">"
+file.WriteLine "     <META NAME=""Információ 1"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 2"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 3"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 4"" CONTENT="""">"
+file.WriteLine "     <STYLE TYPE=""text/css"">"
+file.WriteLine "     <!--"
+file.WriteLine "         @page { margin-left: 2cm; margin-right: 2cm; margin-top: 2.5cm; margin-bottom: 2cm }"
+file.WriteLine "         @page:first { margin-top: 2cm; margin-bottom: 2.5cm }"
+file.WriteLine "         P { margin-right: 0.5cm; margin-bottom: 0.21cm; direction: ltr; color: #000000; widows: 0; orphans: 0 }"
+file.WriteLine "         P.western { font-family: ""Times New Roman"", serif; font-size: 12pt; so-language: hu-HU }"
+file.WriteLine "         P.cjk { font-family: ""SimSun""; font-size: 12pt; so-language: zh-CN }"
+file.WriteLine "         P.ctl { font-family: ""Mangal""; font-size: 12pt; so-language: hi-IN }"
+file.WriteLine "     -->"
+file.WriteLine "     </STYLE>"
+file.WriteLine " </HEAD>"
+file.WriteLine " <BODY LANG=""hu-HU"" TEXT=""#000000"" DIR=""LTR""><SPAN CLASS=""sd-abs-pos"" STYLE=""position: absolute; top: 1.79cm; left: 2.07cm; width: 639px"">"
+'kép helye
+file.WriteLine " <IMG SRC=""file:///D:/fejlec.png"" NAME=""kép1"" WIDTH=639  HEIGHT=150 BORDER=0></SPAN>"
+file.WriteLine " <P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm; font-variant: small-caps"">"
+file.WriteLine " <BR>"
+'ügyszám
+file.WriteLine "</DIV>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "<BR><BR><BR><BR><BR><BR><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>T.C."
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>" & mez(1) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>/2015/1-I.</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR><BR><BR>"
+'címzés
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>" & mez(12) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><B><SPAN STYLE=""background: #ffff00"">nak/nek</SPAN></B></FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><B>,"
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><B><SPAN STYLE=""background: #ffff00"">a(z)</SPAN></B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>" & mez(3) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><B>"
+file.WriteLine "</B></FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>képviselőjének</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><U><B>" & mez(13) & "</B></U></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>" & mez(14) & "</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>" & mez(15) & "</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+'tisztelt
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt"">Tisztelt"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><SPAN STYLE=""background: #ffff00"">" & mez(12) & "!</SPAN></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+'szöveg
+
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Az"
+file.WriteLine "egyesülési jogról, a közhasznú jogállásról, valamint a civil"
+file.WriteLine "szervezetek működéséről és támogatásáról szóló 2011. évi CLXXV."
+file.WriteLine "törvény (a továbbiakban: Ectv.) 11.&sect;-a szerint a civil szervezet"
+file.WriteLine "működése felett az ügyészség az ügyészségről szóló törvény"
+file.WriteLine "rendelkezései szerint törvényességi ellenőrzést gyakorol.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+
+
+'egyesület
+If mez(4) Like "T*" Then
+
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>A"
+file.WriteLine "Pest Megyei Főügyészség fenti jogkörében ellenőrzi a " & mez(3) & "<B>"
+file.WriteLine "</B>(a továbbiakban: egyesület) működésének törvényességét. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=2 STYLE=""font-size: 11pt"">A"
+file.WriteLine "Budapest Környéki Törvényszék értesítése szerint a " & mez(7) & " napján kelt " & mez(5) & "/" & mez(6) & ". számú végzés kézbesítése sikertelen"
+file.WriteLine "maradt, az egyesület törvényszéken bejegyzett székhelyéről (" & mez(11) & " " & mez(9) & ", " & mez(10) & " szám) &bdquo;BÍRÓSÁGI VISSZAJELENTÉS&rdquo; jelzéssel érkezett vissza.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>A"
+file.WriteLine "fentiekre és arra tekintettel, hogy Ön az egyesület törvényszéken"
+file.WriteLine "nyilvántartott képviselője, kérem, hogy a vizsgálat lefolytatása"
+file.WriteLine "céljából szíveskedjen az alábbiakra nyilatkozni és a vonatkozó"
+file.WriteLine "iratokat 15 napon belül a főügyészségnek megküldeni: </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;jelenleg hol található az egyesület székhelye, mi az oka annak, hogy a"
+file.WriteLine "    kézbesítés sikertelen"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maradt;</FONT></P>"
+file.WriteLine "    <P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;ha"
+file.WriteLine "    székhelye nem <FONT SIZE=2 STYLE=""font-size: 11pt"">" & mez(11) & "</FONT><FONT SIZE=2 STYLE=""font-size: 11pt"">"
+file.WriteLine "    </FONT><FONT SIZE=2 STYLE=""font-size: 11pt"">" & mez(9) & "</FONT><FONT SIZE=2 STYLE=""font-size: 11pt"">,"
+file.WriteLine "    </FONT><FONT SIZE=2 STYLE=""font-size: 11pt"">" & mez(10) & "</FONT><FONT SIZE=2 STYLE=""font-size: 11pt"">."
+file.WriteLine "    </FONT><FONT SIZE=2 STYLE=""font-size: 11pt"">szám</FONT>,"
+file.WriteLine "    nyilatkozzon arról, hogy tettek-e"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;intézkedéseket az egyesület"
+file.WriteLine "    székhelyének megváltoztatása érdekében és melyek voltak &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ezek.</FONT></P>"
+file.WriteLine ""
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Tájékoztatom,"
+file.WriteLine "hogy az Ectv. 11.&sect; (5) bekezdésének a) pontja szerint a bíróság"
+file.WriteLine "az ügyész keresete alapján megállapítja az egyesület megszűnését, ha</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><I>aa)</I>"
+file.WriteLine "határozott időre jött létre és a meghatározott időtartam eltelt"
+file.WriteLine "(Polgári Törvénykönyvről szóló 2013. évi V. törvény (Ptk.) 3:48.&sect;"
+file.WriteLine "(1) bekezdés a) pont);</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><I>ab)</I>"
+file.WriteLine "megszűnése feltétel bekövetkezéséhez kötött és e feltétel"
+file.WriteLine "bekövetkezett (Ptk. 3:48.&sect; (1) bekezdés b) pont);<I>  </I></FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><I>ac)"
+file.WriteLine "</I>megvalósította célját vagy céljának megvalósítása lehetetlenné"
+file.WriteLine "vált, és új célt nem határoztak meg (Ptk. 3:84.&sect; a) pont);</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><I>ad)</I>"
+file.WriteLine "a tagjainak száma hat hónapon keresztül a törvényben meghatározott"
+file.WriteLine "legkisebb létszám &ndash; 10 fő &ndash; alá csökken (Ptk. 3:84.&sect;"
+file.WriteLine "b) pont) feltéve, hogy az <I>aa)-ac)</I> pont szerinti esetekben az"
+file.WriteLine "abban foglaltakra figyelemmel az egyesület nem határozott a"
+file.WriteLine "megszűnéséről.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>A"
+file.WriteLine "rendelkezésre álló adatok szerint <B>nem állapítható</B> meg, hogy az"
+file.WriteLine "egyesület a Ptk.-ban foglalt bármely okból megszűnt volna. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Ha"
+file.WriteLine "az egyesület <U>nem működik </U>és a megszűnéséről határozni nem"
+file.WriteLine "képes, szíveskedjen 15 napon belül nyilatkozni, hogy:</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+    file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Az"
+    file.WriteLine "egyesület megvalósította célját vagy céljának megvalósítása"
+    file.WriteLine "lehetetlenné vált és új célt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nem határoztak meg, az egyesület a"
+    file.WriteLine "céljának elérése érdekében feladatát milyen okok &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;miatt nem tudja"
+    file.WriteLine "ellátni jelenleg és a jövőben sem?</FONT></P>"
+    file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Az"
+    file.WriteLine "egyesület legutóbbi közgyűlését mikor tartotta?</FONT></P>"
+    file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;A"
+    file.WriteLine "vezető szervei (elnökség) mióta nem üléseznek?</FONT></P>"
+    file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Az"
+    file.WriteLine "elmúlt két évben konkrétan milyen tevékenységet végzett az"
+    file.WriteLine "egyesület, illetőleg mióta &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nem fejt ki tevékenységet? </FONT>"
+    file.WriteLine "</P>"
+    file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Tagdíjat"
+    file.WriteLine "szednek-e, illetve azt a tagok befizetik-e határidőben? </FONT>"
+    file.WriteLine "</P>"
+    file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;A"
+    file.WriteLine "taglétszám eléri-e a törvényben előírt minimumot (10 fő), illetőleg"
+    file.WriteLine "mikortól csökkent 10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fő alá a taglétszám? Jelenleg hány"
+    file.WriteLine "nyilvántartott tagja van az egyesületnek? </FONT>"
+    file.WriteLine "</P>"
+    file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Van-e"
+    file.WriteLine "az egyesületnek bankszámlája és adószáma? </FONT>"
+    file.WriteLine "</P>"
+    file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Van-e"
+    file.WriteLine "az egyesületnek ingó-, ingatlan vagyona, követelése, tartozása és"
+    file.WriteLine "azok összege? </FONT>"
+    file.WriteLine "</P>"
+    file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3>-&nbsp;&nbsp;&nbsp;Kéri-e,"
+    file.WriteLine "hogy az ügyészség indítson keresetet az egyesület megszűnésének"
+    file.WriteLine "megállapítása &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iránt? </FONT>"
+    file.WriteLine "</P>"
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Kérem,"
+file.WriteLine "hogy amennyiben az egyesület utolsó közgyűlésének jegyzőkönyve,"
+file.WriteLine "legutóbbi pénzügyi (számviteli) beszámolója, illetve bankszámla"
+file.WriteLine "kivonata vagy a bankszámla megszüntetésére vonatkozó iratok Önnél"
+file.WriteLine "fellelhetők, azok másolatát nyilatkozatával együtt szíveskedjék"
+file.WriteLine "megküldeni a főügyészségnek. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+Else
+
+
+
+End If
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>(Levelezési"
+file.WriteLine "cím: Pest Megyei Főügyészség, 1592 Budapest, Pf. 600.)</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Felhívom"
+file.WriteLine "a figyelmét, hogy az ügyészségről szóló 2011. évi CLXIII. törvény"
+file.WriteLine "(Ütv.) 4.&sect; (3) bekezdése alapján adatok és iratok szolgáltatása"
+file.WriteLine "érdekében az ügyész &ndash; többek között &ndash; a civil szervezetet"
+file.WriteLine "megkeresheti, a megkeresett szerv vezetője a megkeresésnek az ügyész"
+file.WriteLine "által megjelölt határidőben köteles eleget tenni.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Amennyiben"
+file.WriteLine "az iratok, illetve nyilatkozatának megküldése akadályba ütközik,"
+file.WriteLine "kérem azt a fenti telefonszámon haladéktalanul közölje.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+
+'keltezés
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal"">"
+file.WriteLine "<FONT SIZE=2 STYLE=""font-size: 11pt"">Budapest, " & intdatum & " napján</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+'aláírás
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal"">"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=2 STYLE=""font-size: 11pt"">dr."
+file.WriteLine "Papp Dániel</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal"">"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+file.WriteLine "<FONT SIZE=2 STYLE=""font-size: 11pt"">főügyészségi ügyészségi"
+file.WriteLine "megbízott</FONT></P>"
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>L.i.:</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Kiadni:"
+file.WriteLine "1-I. sz. int. 1 pld-át címnek, <U>vétívvel</U></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; text-decoration: none"">"
+file.WriteLine "<FONT SIZE=3><B>Sc.: 2015.04.01.</B></FONT></P>"
+file.WriteLine "<DIV TYPE=FOOTER>"
+    file.WriteLine "<P CLASS=""western"" STYLE=""margin-bottom: 0cm""><BR>"
+    file.WriteLine "</P>"
+file.WriteLine "</DIV>"
+file.WriteLine "</BODY>"
+file.WriteLine "</HTML>"
+
+
+
+
+
+
+
+
+file.Close
+
+
+End If
+
+
+
+
+Set fso = Nothing
+Set file = Nothing
+
+
+End Sub
+
+Private Sub attetel_Click()
+
+End Sub
+
+Private Sub datum_Exit(Cancel As Integer)
+Dim vmi As String
+
+datum.SetFocus
+intdatum = datum.Text
+
+vmi = DateAdd("d", 45, intdatum)
+vmi = Format(CDate(vmi), "Long Date")
+'MsgBox (Len(vmi))
+
+scontromez.SetFocus
+scontromez.Text = vmi
+datum.SetFocus
+intdatum = Format(CDate(datum.Text), "Long Date")
+scontromez.SetFocus
+
+'MsgBox (intdatum)
+
+End Sub
+
+Sub hivfelj_Click()
+Dim fso As Object
+Set fso = CreateObject("Scripting.FileSystemObject")
+
+If ReportFileStatus("d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\" & mez(1) & "-2015_hivatalos_feljegyzes.html") = True Then 'achtung!!  nem jó a helye
+
+
+
+' A Msgbox és a feltétel az ismétlés ellen
+MsgBox ("A " & mez(1) & "/2015." & Chr$(13) & mez(3) & " ügyében ilyet csináltál!!!")
+Else
+
+Dim file As Object
+Set file = fso.CreateTextFile("d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\" & mez(1) & "-2015_hivatalos_feljegyzes.html") 'achtung!!  nem jó a helye
+file.WriteLine "<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN"" > "
+file.WriteLine "<HTML>"
+file.WriteLine "<HEAD>"
+file.WriteLine "    <META HTTP-EQUIV=""CONTENT-TYPE"" CONTENT=""text/html; charset=windows-1250"">"
+file.WriteLine "    <TITLE></TITLE>"
+file.WriteLine "    <META NAME=""GENERATOR"" CONTENT=""LibreOffice 3.6  (Windows)"">"
+file.WriteLine "    <META NAME=""CHANGED"" CONTENT=""20150326;13250776"">"
+file.WriteLine "     <META NAME=""Információ 1"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 2"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 3"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 4"" CONTENT="""">"
+file.WriteLine "     <STYLE TYPE=""text/css"">"
+file.WriteLine "     <!--"
+file.WriteLine "         @page { margin-left: 2cm; margin-right: 2cm; margin-top: 2.5cm; margin-bottom: 2cm }"
+file.WriteLine "         @page:first { margin-top: 2cm; margin-bottom: 2.5cm }"
+file.WriteLine "         P { margin-right: 0.5cm; margin-bottom: 0.21cm; direction: ltr; color: #000000; widows: 0; orphans: 0 }"
+file.WriteLine "         P.western { font-family: ""Times New Roman"", serif; font-size: 12pt; so-language: hu-HU }"
+file.WriteLine "         P.cjk { font-family: ""SimSun""; font-size: 12pt; so-language: zh-CN }"
+file.WriteLine "         P.ctl { font-family: ""Mangal""; font-size: 12pt; so-language: hi-IN }"
+file.WriteLine "     -->"
+file.WriteLine "     </STYLE>"
+file.WriteLine " </HEAD>"
+file.WriteLine " <BODY LANG=""hu-HU"" TEXT=""#000000"" DIR=""LTR""><SPAN CLASS=""sd-abs-pos"" STYLE=""position: absolute; top: 1.79cm; left: 2.07cm; width: 639px"">"
+'kép helye
+file.WriteLine " <IMG SRC=""file:///D:/fejlec.png"" NAME=""kép1"" WIDTH=639  HEIGHT=150 BORDER=0></SPAN>"
+file.WriteLine " <P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm; font-variant: small-caps"">"
+file.WriteLine " <BR>"
+'ügyszám
+file.WriteLine "</DIV>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "<BR><BR><BR><BR><BR><BR><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>T.C."
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>" & mez(1) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>/2015.</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR><BR><BR>"
+file.WriteLine "</P><BR><BR>"
+
+'középre hiv Felj.
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><FONT SIZE=3><B>F"
+file.WriteLine "E L J E G Y Z É S</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+'szöveg
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal; line-height: 150%"">"
+file.WriteLine "A " & mez(3) & " nevében <FONT SIZE=3>"
+file.WriteLine "eljáró " & mez(12) & ", " & mez(22) & " napján érkezett beadványa"
+file.WriteLine "szerint a " & mez(3) & " ügyében " & mez(27) & ""
+file.WriteLine "iránti kérelmet nyújtottak be.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal; line-height: 150%"">"
+file.WriteLine "<BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal; line-height: 150%"">"
+file.WriteLine "<FONT SIZE=3>A főügyészség " & mez(18) & " napján kelt jelzése"
+file.WriteLine "eredményes volt, ezért további ügyészi intézkedést nem igényel.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+'keltezés
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal"">"
+file.WriteLine "<FONT SIZE=2 STYLE=""font-size: 11pt"">Budapest, " & intdatum & " napján</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+'aláírás
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal"">"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=2 STYLE=""font-size: 11pt"">dr."
+file.WriteLine "Papp Dániel</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal"">"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+file.WriteLine "<FONT SIZE=2 STYLE=""font-size: 11pt"">főügyészségi ügyészségi"
+file.WriteLine "megbízott</FONT></P>"
+
+'L.i.:
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>L.i.:</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">Bef. irattár"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt""></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>"
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>Itsz.: 93/2031</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""> </FONT></P>"
+file.WriteLine "<DIV TYPE=FOOTER>"
+file.WriteLine "    <P STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "    </P>"
+file.WriteLine "</DIV>"
+file.WriteLine "</BODY>"
+file.WriteLine "</HTML>"
+
+
+
+
+End If
+
+
+file.Close
+
+
+Set fso = Nothing
+Set file = Nothing
+
+End Sub
+
+ Sub iratvisszakuldo_Click()
+Dim fso As Object
+Set fso = CreateObject("Scripting.FileSystemObject")
+Dim maso As Object
+'Set maso = fso.CopyFile("d:\fejlec.png", "d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\")
+
+If ReportFileStatus("d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\" & mez(1) & "-2015_iratvisszakuldes_birosagra.html") = True Then 'achtung!!  nem jó a helye
+
+
+
+' A Msgbox és a feltétel az ismétlés ellen
+MsgBox ("A " & mez(1) & "/2015." & Chr$(13) & mez(3) & " ügyében ilyet csináltál!!!")
+Else
+
+Dim file As Object
+Set file = fso.CreateTextFile("d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\" & mez(1) & "-2015_iratvisszakuldes_birosagra.html") 'achtung!!  nem jó a helye
+file.WriteLine "<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN"" > "
+file.WriteLine "<HTML>"
+file.WriteLine "<HEAD>"
+file.WriteLine "    <META HTTP-EQUIV=""CONTENT-TYPE"" CONTENT=""text/html; charset=windows-1250"">"
+file.WriteLine "    <TITLE></TITLE>"
+file.WriteLine "    <META NAME=""GENERATOR"" CONTENT=""LibreOffice 3.6  (Windows)"">"
+file.WriteLine "    <META NAME=""CHANGED"" CONTENT=""20150326;13250776"">"
+file.WriteLine "     <META NAME=""Információ 1"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 2"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 3"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 4"" CONTENT="""">"
+file.WriteLine "     <STYLE TYPE=""text/css"">"
+file.WriteLine "     <!--"
+file.WriteLine "         @page { margin-left: 2cm; margin-right: 2cm; margin-top: 2.5cm; margin-bottom: 2cm }"
+file.WriteLine "         @page:first { margin-top: 2cm; margin-bottom: 2.5cm }"
+file.WriteLine "         P { margin-right: 0.5cm; margin-bottom: 0.21cm; direction: ltr; color: #000000; widows: 0; orphans: 0 }"
+file.WriteLine "         P.western { font-family: ""Times New Roman"", serif; font-size: 12pt; so-language: hu-HU }"
+file.WriteLine "         P.cjk { font-family: ""SimSun""; font-size: 12pt; so-language: zh-CN }"
+file.WriteLine "         P.ctl { font-family: ""Mangal""; font-size: 12pt; so-language: hi-IN }"
+file.WriteLine "     -->"
+file.WriteLine "     </STYLE>"
+file.WriteLine " </HEAD>"
+file.WriteLine " <BODY LANG=""hu-HU"" TEXT=""#000000"" DIR=""LTR""><SPAN CLASS=""sd-abs-pos"" STYLE=""position: absolute; top: 1.79cm; left: 2.07cm; width: 639px"">"
+'kép helye
+file.WriteLine " <IMG SRC=""file:///D:/fejlec.png"" NAME=""kép1"" WIDTH=639  HEIGHT=150 BORDER=0></SPAN>"
+file.WriteLine " <P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm; font-variant: small-caps"">"
+file.WriteLine " <BR>"
+'címzés ügyszám
+file.WriteLine "</DIV>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "<BR><BR><BR><BR><BR><BR><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>T.C."
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>" & mez(1) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>/2015/1-II.</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR><BR><BR>"
+file.WriteLine "</P><BR><BR>"
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B></B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>"
+file.WriteLine "</B></FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>Budapest Környéki Törvényszék</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><U><B> </B></U></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE"
+file.WriteLine "</P>"
+file.WriteLine "<BR>"
+
+
+'egyforma szöveg rész
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT FACE=""Times New Roman, serif""><FONT SIZE=3><U><B>Budapest</B></U></FONT></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=RIGHT STYLE=""margin-bottom: 0cm""><FONT FACE=""Times New Roman, serif""><FONT SIZE=3><B>Hiv.szám.:"
+file.WriteLine "</B></FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3><SPAN LANG=""""><B><SPAN STYLE=""background: transparent"">" & mez(5) & ".</SPAN></B></SPAN></FONT></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><FONT FACE=""Times New Roman, serif""><FONT SIZE=3><SPAN STYLE=""font-weight: normal"">Tisztelt"
+file.WriteLine "Törvényszék</SPAN></FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>!</FONT></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>A"
+file.WriteLine "fent</FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3><SPAN STYLE=""font-weight: normal"">i"
+file.WriteLine "számra hivatkozással, mellékelten visszaküldöm a </SPAN></FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3><SPAN LANG=""""><SPAN STYLE=""font-weight: normal""><SPAN STYLE=""background: transparent"">"
+file.WriteLine mez(3) & "</SPAN></SPAN></SPAN></FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3><SPAN STYLE=""font-weight: normal"">,"
+file.WriteLine "</SPAN></FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3><B>" & mez(5) & "</B></FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3><SPAN LANG=""""><B><SPAN STYLE=""background: transparent"">.</SPAN></B></SPAN></FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3><B>"
+file.WriteLine "</B></FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3><SPAN STYLE=""font-weight: normal"">számú"
+file.WriteLine "bírósági nyilvántartási iratait.</SPAN></FONT></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+
+
+
+
+
+'változó rész mert egyesület vagy alapítvány
+If mez(4) Like "T*" Then 'egyesület
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>Tájékoztatom,"
+file.WriteLine "hogy a Pest Megyei Főügyészség az egyesület képviselőjének jelzést"
+file.WriteLine "nyújtott be amelyben indítványozta, </FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>"
+file.WriteLine "</FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>az</FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>"
+file.WriteLine "</FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3></FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>"
+file.WriteLine ", hogy az egyesület közgyűlése úgy módosítsa a civil szervezet létesítő okiratának a rendelkezéseit,"
+file.WriteLine "hogy azok mindenben megfeleljenek az</FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3 STYLE=""font-size: 11pt""><SPAN STYLE=""background: transparent"">"
+file.WriteLine "egyesülési jogról, a közhasznú jogállásról, valamint a civil"
+file.WriteLine "szervezetek működéséről szóló 2011. CLXXV. törvény</SPAN></FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>"
+file.WriteLine "és </FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3><SPAN STYLE=""font-weight: normal"">a"
+file.WriteLine "civil szervezetek bírósági nyilvántartásáról és az ezzel összefüggő"
+file.WriteLine "eljárási szabályokról szóló </SPAN></FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>2011."
+file.WriteLine "évi CLXXXI. törvény jelzésben hivatkozott rendelkezéseinek.</FONT></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><B"
+
+Else 'alapítvány
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>Tájékoztatom,"
+file.WriteLine "hogy a Pest Megyei Főügyészség az alapítvány képviselőjének jelzést"
+file.WriteLine "nyújtott be amelyben indítványozta, hogy </FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>intézkedjen"
+file.WriteLine "az iránt, hogy </FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>az</FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>"
+file.WriteLine "</FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>alapító</FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>"
+file.WriteLine "úgy módosítsa a civil szervezet létesítő okiratának a rendelkezéseit,"
+file.WriteLine "hogy azok mindenben megfeleljenek az</FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3 STYLE=""font-size: 11pt""><SPAN STYLE=""background: transparent"">"
+file.WriteLine "egyesülési jogról, a közhasznú jogállásról, valamint a civil"
+file.WriteLine "szervezetek működéséről szóló 2011. CLXXV. törvény</SPAN></FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>"
+file.WriteLine "és </FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3><SPAN STYLE=""font-weight: normal"">a"
+file.WriteLine "civil szervezetek bírósági nyilvántartásáról és az ezzel összefüggő"
+file.WriteLine "eljárási szabályokról szóló </SPAN></FONT></FONT><FONT FACE=""Times New Roman, serif""><FONT SIZE=3>2011."
+file.WriteLine "évi CLXXXI. törvény jelzésben hivatkozott rendelkezéseinek.</FONT></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+End If
+
+
+
+
+
+
+
+
+'keltezés
+
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal"">"
+file.WriteLine "<FONT SIZE=2 STYLE=""font-size: 12pt"">Budapest, " & intdatum & " napján</FONT></P>"
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal"">"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=2 STYLE=""font-size: 12pt"">dr."
+file.WriteLine "Papp Dániel</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal"">"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+file.WriteLine "<FONT SIZE=2 STYLE=""font-size: 12pt"">főügyészségi ügyészségi"
+file.WriteLine "megbízott</FONT></P>"
+
+
+'li:
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>L.i.:</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm; font-weight: normal"">"
+file.WriteLine "<FONT SIZE=2 STYLE=""font-size: 11pt"">Kérem lemásolni a /4.számú"
+file.WriteLine "végzést</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""font-weight: normal""><FONT SIZE=3>Kiadni:"
+file.WriteLine "1-II. sz. int. 1 pld-át címnek, <U>vétívvel</U></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""font-weight: normal"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT SIZE=3><FONT SIZE=2 STYLE=""font-size: 12pt"">+"
+file.WriteLine "csatolni </FONT><FONT FACE=""Times New Roman, serif"">"
+file.WriteLine "</FONT><FONT FACE=""Times New Roman, serif"">" & mez(5) & "</FONT><FONT FACE=""Times New Roman, serif""><SPAN STYLE=""background: transparent"">.</SPAN></FONT>"
+file.WriteLine "bírósági nyilvántartási iratot <U>eredetben</U></FONT></P>"
+file.WriteLine "</BODY>"
+file.WriteLine "</HTML>"
+
+
+
+
+
+file.Close
+
+
+Set fso = Nothing
+Set file = Nothing
+
+
+
+
+End If
+End Sub
+
+ Sub jelzes_Click()
+
+End Sub
+
+ Sub Lakcím_lekérdezés_megtörtént_e__Click()
+
+End Sub
+
+Sub lakcimjelzes_Click()
+Dim fso As Object
+Set fso = CreateObject("Scripting.FileSystemObject")
+Dim maso As Object
+'Set maso = fso.CopyFile("d:\fejlec.png", "d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\")
+
+If ReportFileStatus("d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\" & mez(1) & "-2015_jelzes_lakcim_miatt.html") = True Then
+
+
+
+' A Msgbox és a feltétel ideiglenesen kivéve
+
+MsgBox ("A " & mez(1) & "/2015." & Chr$(13) & mez(3) & " ügyében ilyet csináltál!!!")
+Else
+MsgBox ("sajna ezt még nem fejeztem be")
+
+Dim file As Object
+Set file = fso.CreateTextFile("d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\" & mez(1) & "-2015_jelzes_lakcim_miatt.html")
+file.WriteLine "<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN"" > "
+file.WriteLine "<HTML>"
+file.WriteLine "<HEAD>"
+file.WriteLine "    <META HTTP-EQUIV=""CONTENT-TYPE"" CONTENT=""text/html; charset=windows-1250"">"
+file.WriteLine "    <TITLE></TITLE>"
+file.WriteLine "    <META NAME=""GENERATOR"" CONTENT=""LibreOffice 3.6  (Windows)"">"
+file.WriteLine "    <META NAME=""CHANGED"" CONTENT=""20150326;13250776"">"
+file.WriteLine "     <META NAME=""Információ 1"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 2"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 3"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 4"" CONTENT="""">"
+file.WriteLine "     <STYLE TYPE=""text/css"">"
+file.WriteLine "     <!--"
+file.WriteLine "         @page { margin-left: 2cm; margin-right: 2cm; margin-top: 2.5cm; margin-bottom: 2cm }"
+file.WriteLine "         @page:first { margin-top: 2cm; margin-bottom: 2.5cm }"
+file.WriteLine "         P { margin-right: 0.5cm; margin-bottom: 0.21cm; direction: ltr; color: #000000; widows: 0; orphans: 0 }"
+file.WriteLine "         P.western { font-family: ""Times New Roman"", serif; font-size: 12pt; so-language: hu-HU }"
+file.WriteLine "         P.cjk { font-family: ""SimSun""; font-size: 12pt; so-language: zh-CN }"
+file.WriteLine "         P.ctl { font-family: ""Mangal""; font-size: 12pt; so-language: hi-IN }"
+file.WriteLine "     -->"
+file.WriteLine "     </STYLE>"
+file.WriteLine " </HEAD>"
+file.WriteLine " <BODY LANG=""hu-HU"" TEXT=""#000000"" DIR=""LTR""><SPAN CLASS=""sd-abs-pos"" STYLE=""position: absolute; top: 1.79cm; left: 2.07cm; width: 639px"">"
+'kép helye
+file.WriteLine " <IMG SRC=""file:///D:/fejlec.png"" NAME=""kép1"" WIDTH=639  HEIGHT=150 BORDER=0></SPAN>"
+file.WriteLine " <P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm; font-variant: small-caps"">"
+file.WriteLine " <BR>"
+'címzés ügyszám
+file.WriteLine "</DIV>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "<BR><BR><BR><BR><BR><BR><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>T.C."
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><B>" & mez(1) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><B>/2015/1-I.</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>" & mez(12) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><B><SPAN STYLE=""background: #ffff00"">nak/nek</SPAN></B></FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><B>,"
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><B><SPAN STYLE=""background: #ffff00"">a(z)</SPAN></B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>" & mez(3) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><B>"
+file.WriteLine "</B></FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>képviselőjének</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><U><B>" & mez(9) & "</B></U></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>" & mez(10) & "</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>" & mez(11) & "</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt"">Tisztelt"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><SPAN STYLE=""background: #ffff00"">" & mez(12) & "!</SPAN></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+'szöveg
+
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>A"
+file.WriteLine "Pest Megyei Főügyészség az egyesülési jogról, a közhasznú"
+file.WriteLine "jogállásról, valamint a civil szervezetek működéséről és"
+file.WriteLine "támogatásáról szóló 2012. évi CLXXV. törvény (továbbiakban: Ectv.)"
+file.WriteLine "12.&sect; (1) bekezdésében meghatározott törvényességi ellenőrzés"
+If mez(4) Like "T*" Then
+file.WriteLine "keretében megvizsgálta a </FONT><FONT SIZE=3><B>" & mez(3) & "</B></FONT><FONT SIZE=3> (továbbiakban: egyesület)"
+
+Else
+file.WriteLine "keretében megvizsgálta a </FONT><FONT SIZE=3><B>" & mez(3) & "</B></FONT><FONT SIZE=3> (továbbiakban: alapítvány)"
+
+End If
+file.WriteLine "működésének törvényességét. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Az"
+If mez(4) Like "T*" Then
+file.WriteLine "egyesület működése törvényességi ellenőrzését a Budapest Környéki"
+Else
+file.WriteLine "alapítvány működése törvényességi ellenőrzését a Budapest Környéki"
+End If
+file.WriteLine "Törvényszék kezdeményezte, mivel az Ön bírósági nyilvántartás"
+file.WriteLine "szerinti, " & mez(15) & " " & mez(13) & " " & mez(14) & " lakcímére küldött végzések &bdquo;elköltözött&rdquo;, illetve"
+file.WriteLine "&bdquo;címzett ismeretlen&rdquo; jelzéssel érkeztek vissza.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=5>A"
+file.WriteLine "Pest Megyei Bíróság az egyesületet 2012. július 31. napján kelt"
+file.WriteLine mez(5) & "/8. számú végzésével " & mez(4) & ". szám alatt vette"
+file.WriteLine "nyilvántartásba. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>A"
+
+If mez(4) Like "T*" Then
+file.WriteLine "végzés szerint az egyesület székhelye " & mez(11) & " " & mez(9) & ", " & mez(10)
+Else
+file.WriteLine "végzés szerint az alapítvány székhelye " & mez(11) & " " & mez(9) & ", " & mez(10)
+End If
+
+file.WriteLine "szám. Képviselője</FONT><FONT COLOR=""#000000""><FONT SIZE=3><SPAN STYLE=""text-decoration: none""><SPAN STYLE=""font-weight: normal"">"
+file.WriteLine mez(12) & "(" & mez(15) & " " & mez(13) & ", " & mez(14) & " szám alatti"
+file.WriteLine "lakos).</SPAN></SPAN></FONT></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>A"
+
+If mez(4) Like "T*" Then
+file.WriteLine "főügyészség az egyesület működését a Budapest Környéki Törvényszék"
+file.WriteLine "nyilvántartási iratai  alapján ellenőrizte. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Az"
+file.WriteLine "egyesület működésének ellenőrzése során az alábbiakat állapítottam"
+file.WriteLine "meg. </FONT>"
+
+
+Else
+file.WriteLine "főügyészség az alapítvány működését a Budapest Környéki Törvényszék"
+file.WriteLine "nyilvántartási iratai  alapján ellenőrizte. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Az"
+file.WriteLine "alapítvány működésének ellenőrzése során az alábbiakat állapítottam"
+file.WriteLine "meg. </FONT>"
+
+
+End If
+
+
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Az"
+file.WriteLine "egyesület bírósági nyilvántartásba bejegyzett elnöke</FONT><FONT COLOR=""#000000""><FONT SIZE=3><SPAN STYLE=""font-style: normal""><SPAN STYLE=""text-decoration: none""><SPAN STYLE=""font-weight: normal"">"
+file.WriteLine "Madarassyné Tóth Anikó, lakcíme 2100 Gödöllő, Szivárvány u. 29. szám.</SPAN></SPAN></SPAN></FONT></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>A"
+file.WriteLine "törvényszék nyilvántartása az elnök lakcímére vonatkozóan nem a"
+file.WriteLine "valóságnak megfelelő adatokat tartalmazza. A Közigazgatási és"
+file.WriteLine "Elektronikus Közszolgáltatások Központi Hivatala nyilvántartása"
+file.WriteLine "szerint </FONT><FONT COLOR=""#000000""><FONT SIZE=3><SPAN STYLE=""font-style: normal""><SPAN STYLE=""text-decoration: none""><SPAN STYLE=""font-weight: normal"">Madarassyné"
+file.WriteLine "Tóth Anikó</SPAN></SPAN></SPAN></FONT></FONT><FONT SIZE=3> érvényes"
+file.WriteLine "lakcíme 1035 </FONT><FONT COLOR=""#000000""><FONT SIZE=3><SPAN STYLE=""text-decoration: none""><SPAN STYLE=""font-weight: normal"">Budapest,"
+file.WriteLine "</SPAN></SPAN></FONT></FONT><FONT COLOR=""#000000""><FONT SIZE=3><SPAN STYLE=""font-style: normal""><SPAN STYLE=""text-decoration: none""><SPAN STYLE=""font-weight: normal"">Kórház"
+file.WriteLine "utca 29. 10. em. 28. ajtó.</SPAN></SPAN></SPAN></FONT></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>A"
+file.WriteLine "civil szervezetek bírósági nyilvántartásáról és az ezzel összefüggő"
+file.WriteLine "eljárási szabályokról szóló 2012. évi CLXXXI. törvény (továbbiakban:"
+file.WriteLine "Cnytv.) 91.&sect; (1) bekezdés f) pontjában meghatározottak szerint a"
+file.WriteLine "nyilvántartás valamennyi szervezet esetében tartalmazza a szervezet"
+file.WriteLine "képviselőjének nevét és lakóhelyét. A Cnytv. 86.&sect;-ának (1)"
+file.WriteLine "vbekezdése szerint a civil és egyéb, cégnek nem minősülő szervezetek"
+file.WriteLine "nyilvántartása közhiteles. Erre figyelemmel, a Cnytv. 20.&sect; (1)"
+file.WriteLine "bekezdés e) pontjában, valamint a 23.&sect; d) pontjában előírtak"
+file.WriteLine "alapján kell bejelenteni a szervezet képviselőjének nevét, lakóhelyét"
+file.WriteLine "illetőleg annak megváltozását a törvényszéknek. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Az"
+file.WriteLine "ügyészi ellenőrzés megállapította, hogy a képviselő lakcíme"
+file.WriteLine "változásának bejegyzését eddig nem kérte a törvényszéktől.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Az"
+file.WriteLine "ismertetett törvénysértő állapot fenntartásával az egyesület működése"
+file.WriteLine "nem felel meg a vonatkozó jogszabályi előírásoknak.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>A"
+file.WriteLine "fentiekre tekintettel az ügyészségről szóló 2012. évi CLXIII. törvény"
+file.WriteLine "(Ütv.) 26. &sect; (7) bekezdése alapján</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><FONT SIZE=3><B>j"
+file.WriteLine "e l z é s b e n</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>hívom"
+file.WriteLine "fel a figyelmét és indítványozom, hogy Elnök Asszony a"
+file.WriteLine "lakcímváltozásának bejegyzése iránt nyújtson be kérelmet a Budapest"
+file.WriteLine "Környéki Törvényszéknek.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3>Kérem,"
+file.WriteLine "hogy a jelzéssel kapcsolatos álláspontjáról 30 napon belül"
+file.WriteLine "szíveskedjen értesíteni a Pest Megyei Főügyészséget.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+'keltezés
+
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt"">Budapest, " & intdatum & " napján</FONT></P>"
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt"">                             </FONT><FONT SIZE=3 STYLE=""font-size: 12pt"">"
+
+file.WriteLine "<B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Muhiné dr. Bajzáth Melinda</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; főügyészségi ügyész</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>L.i.:</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt"">Kiadni:"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><SPAN STYLE=""background: #ffff00"">1-I."
+file.WriteLine "sz. int.</SPAN></FONT><FONT SIZE=3 STYLE=""font-size: 12pt""> 1 pld-át"
+file.WriteLine "címnek, </FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><U>vétívvel</U></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""><B>Sc.:"
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 12pt""><B>" & mez(16) & "</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 12pt""> </FONT></P>"
+file.WriteLine "<DIV TYPE=FOOTER>"
+file.WriteLine "    <P STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "    </P>"
+file.WriteLine "</DIV>"
+file.WriteLine "</BODY>"
+file.WriteLine "</HTML>"
+
+
+
+
+
+file.WriteLine ""
+file.WriteLine ""
+
+
+
+
+
+file.Close
+
+
+Set fso = Nothing
+Set file = Nothing
+
+End If
+
+
+End Sub
+
+
+
+
+Sub mintajelz_Click()
+
+Dim fso As Object
+Set fso = CreateObject("Scripting.FileSystemObject")
+
+If ReportFileStatus("d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\" & mez(1) & "-2015_jelzes.html") = True Then
+MsgBox ("A " & mez(1) & "/2015." & Chr$(13) & mez(3) & " ügyében ilyet csináltál!!!")
+Else
+
+Dim file As Object
+Set file = fso.CreateTextFile("d:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\" & mez(1) & "-2015_jelzes.html")
+
+mez(7) = Format(CDate(mez(7)), "Long Date")
+'fejléc
+file.WriteLine "<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN"" > "
+file.WriteLine "<HTML>"
+file.WriteLine "<HEAD>"
+file.WriteLine "    <META HTTP-EQUIV=""CONTENT-TYPE"" CONTENT=""text/html; charset=windows-1250"">"
+file.WriteLine "    <TITLE></TITLE>"
+file.WriteLine "    <META NAME=""GENERATOR"" CONTENT=""LibreOffice 3.6  (Windows)"">"
+file.WriteLine "    <META NAME=""CHANGED"" CONTENT=""20150326;13250776"">"
+file.WriteLine "     <META NAME=""Információ 1"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 2"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 3"" CONTENT="""">"
+file.WriteLine "     <META NAME=""Információ 4"" CONTENT="""">"
+file.WriteLine "     <STYLE TYPE=""text/css"">"
+file.WriteLine "     <!--"
+file.WriteLine "         @page { margin-left: 2cm; margin-right: 2cm; margin-top: 2.5cm; margin-bottom: 2cm }"
+file.WriteLine "         @page:first { margin-top: 2cm; margin-bottom: 2.5cm }"
+file.WriteLine "         P { margin-right: 0.5cm; margin-bottom: 0.21cm; direction: ltr; color: #000000; widows: 0; orphans: 0 }"
+file.WriteLine "         P.western { font-family: ""Times New Roman"", serif; font-size: 12pt; so-language: hu-HU }"
+file.WriteLine "         P.cjk { font-family: ""SimSun""; font-size: 12pt; so-language: zh-CN }"
+file.WriteLine "         P.ctl { font-family: ""Mangal""; font-size: 12pt; so-language: hi-IN }"
+file.WriteLine "     -->"
+file.WriteLine "     </STYLE>"
+file.WriteLine " </HEAD>"
+file.WriteLine " <BODY LANG=""hu-HU"" TEXT=""#000000"" DIR=""LTR""><SPAN CLASS=""sd-abs-pos"" STYLE=""position: absolute; top: 1.79cm; left: 2.07cm; width: 639px"">"
+file.WriteLine " <IMG SRC=""fejlec.png"" NAME=""kép1"" WIDTH=639  HEIGHT=165 BORDER=0></SPAN>"
+file.WriteLine " <P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm; font-variant: small-caps"">"
+file.WriteLine " <BR>"
+
+'címzés ügyszám
+file.WriteLine "</DIV>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "<BR><BR><BR><BR><BR><BR><BR><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>T.C."
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>" & mez(1) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>/2015/1-I.</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>" & mez(12) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B><SPAN STYLE=""background: #ffff00"">nak/nek</SPAN></B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>,"
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B><SPAN STYLE=""background: #ffff00"">a(z)</SPAN></B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>" & mez(3) & "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>"
+file.WriteLine "</B></FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>képviselőjének</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><U><B>" & mez(9) & "</B></U></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>" & mez(10) & "</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>" & mez(11) & "</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">Tisztelt"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><SPAN STYLE=""background: #ffff00"">" & mez(12) & "!</SPAN></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+
+' minta jelzés egyforma része
+
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "Budapest Környéki Törvényszék (a továbbiakban: Törvényszék) az"
+file.WriteLine "egyesülési jogról, a közhasznú jogállásról, valamint a civil"
+file.WriteLine "szervezetek működéséről szóló 2011. CLXXV. törvény (a továbbiakban:"
+file.WriteLine "Ectv.) 11. &sect;-ának (1) bekezdésére hivatkozva megkereste a Pest"
+file.WriteLine "Megyei Főügyészséget </FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><SPAN STYLE=""background: #ffff00"">a(z)</SPAN></FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "" & mez(3) & " (továbbiakban: civil szervezet) feletti"
+file.WriteLine "törvényességi ellenőrzési eljárás lefolytatására.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "Főügyészség a civil szervezet működését a Törvényszék nyilvántartási"
+file.WriteLine "iratai és adatai alapján ellenőrizte. Az ellenőrzés során az"
+file.WriteLine "alábbiakat állapítottam meg:</FONT></P>"
+
+
+If LCase(mez(3)) Like "*közh*" Then ' közhasznú kétpontos
+If mez(4) Like "t*" Then 'egyesület
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">1.)  A"
+file.WriteLine "civil szervezet közhasznú jogállásának törlése ellenére továbbra is"
+file.WriteLine "használja nevében a közhasznú megjelölést.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "Törvényszék a " & mez(7) & " </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">napján"
+file.WriteLine "kelt és " & mez(8) & " napján jogerős"
+file.WriteLine "" & mez(5) & "/" & mez(6) & ". </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">számú"
+file.WriteLine "végzésével a civil szervezet közhasznú jogállását törölte, és egyben"
+file.WriteLine "felhívta a </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">civil"
+file.WriteLine "szervezetet</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">, hogy"
+file.WriteLine "kezdeményezze a nyilvántartó bíróságnál a létesítő okirat"
+file.WriteLine "módosítását. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "Polgári Törvénykönyvről szóló 2013. évi V. törvény (a továbbiakban:"
+file.WriteLine "Ptk.) 3:5 &sect;-ának </FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><I>a)</I></FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "pontja szerint a jogi személy létesítő okiratában meg kell határozni"
+file.WriteLine "a jogi személy nevét. A Ptk. 3:6 &sect;-ának (2) bekezdése úgy"
+file.WriteLine "rendelkezik, hogy a jogi személy neve nem kelthet a valósággal"
+file.WriteLine "ellentétes látszatot. Az Ectv. 36. &sect;-ának (1) bekezdése, továbbá"
+file.WriteLine "a 75. &sect;-ának (5) bekezdése értelmében csak a közhasznú jogállású"
+file.WriteLine "szervezet jogosult használni a közhasznú megjelölést. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "civil szervezetek bírósági nyilvántartásáról és az ezzel összefüggő"
+file.WriteLine "eljárási szabályokról szóló 2011. évi CLXXXI. törvény (a"
+file.WriteLine "továbbiakban: Cnytv.) 86. &sect;-a alapján a civil szervezetek"
+file.WriteLine "Törvényszék által vezetett nyilvántartása közhiteles. Ez azt jelenti,"
+file.WriteLine "hogy az ellenkező bizonyításáig mindenkinek valósnak és fennállónak"
+file.WriteLine "kell elfogadnia az abban bejegyzett tényeket, adatokat. Ennek okán,"
+file.WriteLine "amennyiben a bejegyzett adatokban változás történik, a megváltozott"
+file.WriteLine "adat módosítását haladéktalanul kezdeményezni kell a nyilvántartó"
+file.WriteLine "bíróságnál. Ez biztosítja csak azt, hogy más személyek a"
+file.WriteLine "nyilvántartás adataiban bízva járhassanak el. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT COLOR=""#000000""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "fentiekből következően, névváltozás esetén &ndash; a Ptk., az Ectv."
+file.WriteLine "és a Cnytv. idézett rendelkezései alapján &ndash; </FONT></FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">a"
+file.WriteLine "létesítő okiratot módosítani kell, mely </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">a"
+file.WriteLine "döntéshozó szerv joga</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">. A"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">döntéshozó szerv"
+file.WriteLine "határozatának elfogadását követő hatvan napon belül </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">a"
+file.WriteLine "módosított okiratot változásbejegyzési kérelem benyújtása mellett meg"
+file.WriteLine "kell küldeni a nyilvántartó bíróságnak </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">[</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">Cnytv."
+file.WriteLine "37.&sect; (1)-(2) bek., 38.&sect; (1) bek.</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">].</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "civil szervezet nevében továbbra is szerepel a közhasznú megjelölés,"
+file.WriteLine "amely a fenti jogszabályi rendelkezéseknek nem felel meg, emiatt a"
+file.WriteLine "civil szervezet törvényes működése nem biztosított.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">2.)  A"
+file.WriteLine "civil szervezet közhasznú jogállásának törlése ellenére létesítő"
+file.WriteLine "okirata továbbra is közhasznú jogállásra utaló rendelkezéseket"
+file.WriteLine "tartalmaz.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "Cnytv. 86.&sect;-ának (2) bekezdésében írtak értelmében az egyesület"
+file.WriteLine "bírósághoz benyújtott iratai &ndash; ide nem tartozó kivételek"
+file.WriteLine "mellett &ndash; nyilvánosak, azokat bárki megtekintheti, arról"
+file.WriteLine "feljegyzést készíthet. Ezek közül a létesítő okirat tartalmazza a"
+file.WriteLine "működésére és a szervezet jogállására vonatkozó rendelkezéseket. A"
+file.WriteLine "közhasznú jogállásra utaló kifejezések, megjelölések azt a látszatot"
+file.WriteLine "kelthetik, hogy a civil szervezet még mindig közhasznú szervezetként"
+file.WriteLine "működik, illetve a közhasznúsággal járó kedvezmények igénybevételére"
+file.WriteLine "jogosult. </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">Tekintettel"
+file.WriteLine "erre, a létesítő okirat tartalma megtévesztő.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "létesítő okirat nem felel meg az Ectv. 36. &sect;-ának (1)"
+file.WriteLine "bekezdésében és a 75. &sect;-a (5) bekezdésében írt rendelkezéseknek,"
+file.WriteLine "mivel abban a közhasznú jogállás látszatát keltő megjelölések"
+file.WriteLine "szerepelnek. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">Tájékoztatom,"
+file.WriteLine "abban az esetben, ha a civil szervezet a közhasznú jogállást a"
+file.WriteLine "jövőben ismételten kérelmezni kívánja, a közhasznúságú jellegű"
+file.WriteLine "tevékenységére vonatkozó rendelkezéseket a létesítő okiratából nem"
+file.WriteLine "köteles törölni, de ebben az esetben is annak a ténynek, hogy a civil"
+file.WriteLine "szervezet nem közhasznú jogállású, a létesítő okiratból egyértelműen"
+file.WriteLine "ki kell derülnie.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "fentiekre </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">az ügyészségről"
+file.WriteLine "szóló 2011. évi CLXIII. törvény (továbbiakban: Ütv.) 26. &sect;-a (7)"
+file.WriteLine "bekezdése alapján </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>j"
+file.WriteLine "e l z é s b e n</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">hívom"
+file.WriteLine "fel a figyelmét és indítványozom, hogy intézkedjen az iránt, hogy </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">a"
+file.WriteLine "döntéshozó szerv</FONT><FONT SIZE=3 STYLE=""font-size: 11pt""> úgy"
+file.WriteLine "módosítsa a civil szervezet nevét és létesítő okiratának a jelzés 1.)"
+file.WriteLine "és 2.) pontjaiban hivatkozott rendelkezéseit, hogy azok mindenben"
+file.WriteLine "megfeleljenek az Ectv., a Cnytv. és a Ptk. hivatkozott"
+file.WriteLine "rendelkezéseinek. A </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">döntéshozó"
+file.WriteLine "szerv erről szóló határozatának elfogadását</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "követő hatvan napon belül </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">a"
+file.WriteLine "módosított létesítő okiratot változásbejegyzési kérelem benyújtása"
+file.WriteLine "mellett meg kell küldeni a nyilvántartó bíróságnak.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+Else 'alapítvány
+
+
+file.WriteLine "<FONT SIZE=3 STYLE=""font-size: 11pt""><P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">1.) A"
+file.WriteLine "civil szervezet közhasznú jogállásának törlése ellenére továbbra is"
+file.WriteLine "használja nevében a közhasznú megjelölést.</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">A"
+file.WriteLine "Törvényszék a " & mez(7) & " napján kelt és " & mez(8)
+file.WriteLine " napján jogerős " & mez(5) & "/" & mez(6) & ". számú végzésével a civil szervezet"
+
+file.WriteLine "közhasznú jogállását törölte, és egyben felhívta az alapítót, hogy"
+file.WriteLine "kezdeményezze a nyilvántartó bíróságnál a létesítő okirat"
+file.WriteLine "módosítását."
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">A Polgári"
+file.WriteLine "Törvénykönyvről szóló 2013. évi V. törvény (a továbbiakban: Ptk.) 3:5"
+file.WriteLine "&sect;-ának <I>a)</I> pontja szerint a jogi személy létesítő"
+file.WriteLine "okiratában meg kell határozni a jogi személy nevét. A Ptk. 3:6 &sect;-ának"
+file.WriteLine "(2) bekezdése úgy rendelkezik, hogy a jogi személy neve nem kelthet a"
+file.WriteLine "valósággal ellentétes látszatot. Az Ectv. 36. &sect;-ának (1)"
+file.WriteLine "bekezdése, továbbá a 75. &sect;-ának (5) bekezdése értelmében csak a"
+file.WriteLine "közhasznú jogállású szervezet jogosult használni a közhasznú"
+file.WriteLine "megjelölést."
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">A civil"
+file.WriteLine "szervezetek bírósági nyilvántartásáról és az ezzel összefüggő"
+file.WriteLine "eljárási szabályokról szóló 2011. évi CLXXXI. törvény (a"
+file.WriteLine "továbbiakban: Cnytv.) 86. &sect;-a alapján a civil szervezetek"
+file.WriteLine "Törvényszék által vezetett nyilvántartása közhiteles. Ez azt jelenti,"
+file.WriteLine "hogy az ellenkező bizonyításáig mindenkinek valósnak és fennállónak"
+file.WriteLine "kell elfogadnia az abban bejegyzett tényeket, adatokat. Ennek okán,"
+file.WriteLine "amennyiben a bejegyzett adatokban változás történik, a megváltozott"
+file.WriteLine "adat módosítását haladéktalanul kezdeményezni kell a nyilvántartó"
+file.WriteLine "bíróságnál. Ez biztosítja csak azt, hogy más személyek a"
+file.WriteLine "nyilvántartás adataiban bízva járhassanak el."
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT COLOR=""#000000"">A"
+file.WriteLine "fentiekből következően, névváltozás esetén &ndash; a Ptk., az Ectv."
+file.WriteLine "és a Cnytv. idézett rendelkezései alapján &ndash; </FONT>a létesítő"
+file.WriteLine "okiratot módosítani kell, mely az alapító joga. A létesítő okirat"
+file.WriteLine "módosítását követő hatvan napon belül a módosított okiratot"
+file.WriteLine "változásbejegyzési kérelem benyújtása mellett meg kell küldeni a"
+file.WriteLine "nyilvántartó bíróságnak [Cnytv. 37.&sect; (1)-(2) bek., 38.&sect; (1)"
+file.WriteLine "bek.].</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">A civil"
+file.WriteLine "szervezet nevében továbbra is szerepel a közhasznú megjelölés, amely"
+file.WriteLine "a fenti jogszabályi rendelkezéseknek nem felel meg, emiatt a civil"
+file.WriteLine "szervezet törvényes működése nem biztosított.</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">2.) A"
+file.WriteLine "civil szervezet közhasznú jogállásának törlése ellenére létesítő"
+file.WriteLine "okirata továbbra is közhasznú jogállásra utaló rendelkezéseket"
+file.WriteLine "tartalmaz.</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">A Cnytv."
+file.WriteLine "86.&sect;-ának (2) bekezdésében írtak értelmében az alapítvány"
+file.WriteLine "bírósághoz benyújtott iratai &ndash; ide nem tartozó kivételek"
+file.WriteLine "mellett &ndash; nyilvánosak, azokat bárki megtekintheti, arról"
+file.WriteLine "feljegyzést készíthet. Ezek közül a létesítő okirat tartalmazza a"
+file.WriteLine "működésére és a szervezet jogállására vonatkozó rendelkezéseket. A"
+file.WriteLine "közhasznú jogállásra utaló kifejezések, megjelölések azt a látszatot"
+file.WriteLine "kelthetik, hogy a civil szervezet még mindig közhasznú szervezetként"
+file.WriteLine "működik, illetve a közhasznúsággal járó kedvezmények igénybevételére"
+file.WriteLine "jogosult. Tekintettel erre, a létesítő okirat tartalma megtévesztő.</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">A"
+file.WriteLine "létesítő okirat nem felel meg az Ectv. 36. &sect;-ának (1)"
+file.WriteLine "bekezdésében és a 75. &sect;-a (5) bekezdésében írt rendelkezéseknek,"
+file.WriteLine "mivel abban a közhasznú jogállás látszatát keltő megjelölések"
+file.WriteLine "szerepelnek."
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">Tájékoztatom,"
+file.WriteLine "abban az esetben, ha a civil szervezet a közhasznú jogállást a"
+file.WriteLine "jövőben ismételten kérelmezni kívánja, a közhasznúságú jellegű"
+file.WriteLine "tevékenységére vonatkozó rendelkezéseket a létesítő okiratából nem"
+file.WriteLine "köteles törölni, de ebben az esetben is annak a ténynek, hogy a civil"
+file.WriteLine "szervezet nem közhasznú jogállású, a létesítő okiratból egyértelműen"
+file.WriteLine "ki kell derülnie.</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">Megjegyzem,"
+file.WriteLine "hogy a Főügyészség a vonatkozó jogszabályi rendelkezések alapján az"
+file.WriteLine "alapító felé közvetlenül nem intézkedhetett."
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">A"
+file.WriteLine "fentiekre az ügyészségről szóló 2011. évi CLXIII. törvény"
+file.WriteLine "(továbbiakban: Ütv.) 26. &sect;-a (7) bekezdése alapján"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><B>j e l z"
+file.WriteLine "é s b e n</B></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm"">hívom fel"
+file.WriteLine "a figyelmét és indítványozom, hogy intézkedjen az iránt, hogy az"
+file.WriteLine "alapító úgy módosítsa a civil szervezet nevét és létesítő okiratának"
+file.WriteLine "a jelzés 1.) és 2.) pontjaiban hivatkozott rendelkezéseit, hogy azok"
+file.WriteLine "mindenben megfeleljenek az Ectv., a Cnytv. és a Ptk. hivatkozott"
+file.WriteLine "rendelkezéseinek. A létesítő okirat módosítását követő hatvan napon"
+file.WriteLine "belül a módosított létesítő okiratot változásbejegyzési kérelem"
+file.WriteLine "benyújtása mellett meg kell küldeni a nyilvántartó bíróságnak.</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</FONT></P>"
+
+End If
+
+
+Else 'nem közhasznú egypontos
+
+If mez(4) Like "t*" Then 'egyesület
+
+
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "civil szervezet közhasznú jogállásának törlése ellenére létesítő"
+file.WriteLine "okirata továbbra is közhasznú jogállásra utaló rendelkezéseket"
+file.WriteLine "tartalmaz.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "Törvényszék a </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">" & mez(7) & "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">napján kelt és"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">" & mez(8) & "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "napján jogerős </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">" & mez(5) & "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">/</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">" & mez(6) & "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">."
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">számú végzésével a civil"
+file.WriteLine "szervezet közhasznú jogállását törölte, és egyben felhívta a </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">civil"
+file.WriteLine "szervezetet</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">, hogy"
+file.WriteLine "kezdeményezze a nyilvántartó bíróságnál a létesítő okirat"
+file.WriteLine "módosítását. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT COLOR=""#000000""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "civil szervezetek bírósági nyilvántartásáról és az ezzel összefüggő"
+file.WriteLine "eljárási szabályokról szóló 2011. évi CLXXXI. törvény (a"
+file.WriteLine "továbbiakban: Cnytv.) </FONT></FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">86.&sect;-ának"
+file.WriteLine "(2) bekezdésében írtak értelmében az egyesület bírósághoz benyújtott"
+file.WriteLine "iratai &ndash; ide nem tartozó kivételek mellett &ndash; nyilvánosak,"
+file.WriteLine "azokat bárki megtekintheti, arról feljegyzést készíthet. Ezek közül a"
+file.WriteLine "létesítő okirat tartalmazza a működésére és a szervezet jogállására"
+file.WriteLine "vonatkozó rendelkezéseket. A közhasznú jogállásra utaló kifejezések,"
+file.WriteLine "megjelölések azt a látszatot kelthetik, hogy a civil szervezet még"
+file.WriteLine "mindig közhasznú szervezetként működik, illetve a közhasznúsággal"
+file.WriteLine "járó kedvezmények igénybevételére jogosult. </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">Tekintettel"
+file.WriteLine "erre, a létesítő okirat tartalma megtévesztő.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "létesítő okirat nem felel meg az Ectv. 36. &sect;-ának (1)"
+file.WriteLine "bekezdésében és a 75. &sect;-a (5) bekezdésében írt rendelkezéseknek,"
+file.WriteLine "mivel abban a közhasznú jogállás látszatát keltő megjelölések"
+file.WriteLine "szerepelnek. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">Tájékoztatom,"
+file.WriteLine "abban az esetben, ha a civil szervezet a közhasznú jogállást a"
+file.WriteLine "jövőben ismételten kérelmezni kívánja, a közhasznúságú jellegű"
+file.WriteLine "tevékenységére vonatkozó rendelkezéseket a létesítő okiratából nem"
+file.WriteLine "köteles törölni, de ebben az esetben is annak a ténynek, hogy a civil"
+file.WriteLine "szervezet nem közhasznú jogállású, a létesítő okiratból egyértelműen"
+file.WriteLine "ki kell derülnie.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT COLOR=""#000000"">A"
+file.WriteLine "fentiekből következően &ndash; az Ectv. és a Cnytv. idézett"
+file.WriteLine "rendelkezései alapján &ndash; </FONT>a létesítő okiratot módosítani"
+file.WriteLine "kell, mely a döntéshozó szerv joga.</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "fentiekre </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">az ügyészségről"
+file.WriteLine "szóló 2011. évi CLXIII. törvény (továbbiakban: Ütv.) 26. &sect;-a (7)"
+file.WriteLine "bekezdése alapján </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>j"
+file.WriteLine "e l z é s b e n</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">hívom"
+file.WriteLine "fel a figyelmét és indítványozom, hogy intézkedjen az iránt, hogy </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">a"
+file.WriteLine "döntéshozó szerv</FONT><FONT SIZE=3 STYLE=""font-size: 11pt""> úgy"
+file.WriteLine "módosítsa a civil szervezet létesítő okiratának a rendelkezéseit,"
+file.WriteLine "hogy azok mindenben megfeleljenek az Ectv. és a Cnytv. hivatkozott"
+file.WriteLine "rendelkezéseinek. A </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">döntéshozó"
+file.WriteLine "szerv erről szóló határozatának elfogadását</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "követő hatvan napon belül </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">a"
+file.WriteLine "módosított létesítő okiratot változásbejegyzési kérelem benyújtása"
+file.WriteLine "mellett meg kell küldeni a nyilvántartó bíróságnak </FONT>[Cnytv."
+file.WriteLine "37.&sect; (1)-(2) bek., 38.&sect; (1) bek.].</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+
+Else 'alapítvány
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "civil szervezet közhasznú jogállásának törlése ellenére létesítő"
+file.WriteLine "okirata továbbra is közhasznú jogállásra utaló rendelkezéseket"
+file.WriteLine "tartalmaz.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "Törvényszék a </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">" & mez(7) & "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">napján kelt és"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">" & mez(7) & "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "napján jogerős </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">" & mez(5) & "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">/</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">" & mez(6)   '"</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt""> számú végzésével a civil"
+file.WriteLine "szervezet közhasznú jogállását törölte, és egyben felhívta a</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">z"
+file.WriteLine "alapítót</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">, hogy"
+file.WriteLine "kezdeményezze a nyilvántartó bíróságnál a létesítő okirat"
+file.WriteLine "módosítását. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT COLOR=""#000000""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "civil szervezetek bírósági nyilvántartásáról és az ezzel összefüggő"
+file.WriteLine "eljárási szabályokról szóló 2011. évi CLXXXI. törvény (a"
+file.WriteLine "továbbiakban: Cnytv.) </FONT></FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">86.&sect;-ának"
+file.WriteLine "(2) bekezdésében írtak értelmében az alapítvány bírósághoz benyújtott"
+file.WriteLine "iratai &ndash; ide nem tartozó kivételek mellett &ndash; nyilvánosak,"
+file.WriteLine "azokat bárki megtekintheti, arról feljegyzést készíthet. Ezek közül a"
+file.WriteLine "létesítő okirat tartalmazza a működésére és a szervezet jogállására"
+file.WriteLine "vonatkozó rendelkezéseket. A közhasznú jogállásra utaló kifejezések,"
+file.WriteLine "megjelölések azt a látszatot kelthetik, hogy a civil szervezet még"
+file.WriteLine "mindig közhasznú szervezetként működik, illetve a közhasznúsággal"
+file.WriteLine "járó kedvezmények igénybevételére jogosult. </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">Tekintettel"
+file.WriteLine "erre, a létesítő okirat tartalma megtévesztő.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "létesítő okirat nem felel meg az Ectv. 36. &sect;-ának (1)"
+file.WriteLine "bekezdésében és a 75. &sect;-a (5) bekezdésében írt rendelkezéseknek,"
+file.WriteLine "mivel abban a közhasznú jogállás látszatát keltő megjelölések"
+file.WriteLine "szerepelnek. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">Tájékoztatom,"
+file.WriteLine "abban az esetben, ha a civil szervezet a közhasznú jogállást a"
+file.WriteLine "jövőben ismételten kérelmezni kívánja, a közhasznúságú jellegű"
+file.WriteLine "tevékenységére vonatkozó rendelkezéseket a létesítő okiratából nem"
+file.WriteLine "köteles törölni, de ebben az esetben is annak a ténynek, hogy a civil"
+file.WriteLine "szervezet nem közhasznú jogállású, a létesítő okiratból egyértelműen"
+file.WriteLine "ki kell derülnie.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT COLOR=""#000000"">A"
+file.WriteLine "fentiekből következően &ndash; az Ectv. és a Cnytv. idézett"
+file.WriteLine "rendelkezései alapján &ndash; </FONT>a létesítő okiratot módosítani"
+file.WriteLine "kell, mely az alapító joga. <FONT SIZE=3 STYLE=""font-size: 11pt"">Megjegyzem,"
+file.WriteLine "hogy a Főügyészség a vonatkozó jogszabályi rendelkezések alapján az"
+file.WriteLine "alapító felé közvetlenül nem intézkedhetett. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">A"
+file.WriteLine "fentiekre </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">az ügyészségről"
+file.WriteLine "szóló 2011. évi CLXIII. törvény (továbbiakban: Ütv.) 26. &sect;-a (7)"
+file.WriteLine "bekezdése alapján </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>j"
+file.WriteLine "e l z é s b e n</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">hívom"
+file.WriteLine "fel a figyelmét és indítványozom, hogy intézkedjen az iránt, hogy </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">az</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">alapító</FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "úgy módosítsa a civil szervezet létesítő okiratának a rendelkezéseit,"
+file.WriteLine "hogy azok mindenben megfeleljenek az Ectv. és a Cnytv. hivatkozott"
+file.WriteLine "rendelkezéseinek. A </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">létesítő"
+file.WriteLine "okirat módosítását</FONT><FONT SIZE=3 STYLE=""font-size: 11pt""> követő"
+file.WriteLine "hatvan napon belül </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">a"
+file.WriteLine "módosított létesítő okiratot változásbejegyzési kérelem benyújtása"
+file.WriteLine "mellett meg kell küldeni a nyilvántartó bíróságnak </FONT>[Cnytv."
+file.WriteLine "37.&sect; (1)-(2) bek., 38.&sect; (1) bek.].</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+
+
+End If
+End If
+
+'egyforma rész, mert a vége a jelzésnek ugyan az
+file.WriteLine ""
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">Kérem,"
+file.WriteLine "hogy a jelzéssel kapcsolatos álláspontjáról 30 napon belül"
+file.WriteLine "szíveskedjen értesíteni a Pest Megyei Főügyészséget. </FONT>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=CENTER STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">Tájékoztatom,"
+file.WriteLine "hogy a létesítő okirat módosítását a Cnytv. 38. &sect;-ában írt"
+file.WriteLine "változásbejegyzési eljárásnak megfelelően, és </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">a"
+file.WriteLine "civil szervezetek bírósági eljárásokban alkalmazandó űrlapjairól"
+file.WriteLine "szóló 11/2012. (II. 29.) KIM rendelet által előírt formában és"
+file.WriteLine "adattartalommal kiállított </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">kérelemmel"
+file.WriteLine "a</FONT><FONT SIZE=3 STYLE=""font-size: 11pt""> Törvényszéknek is be"
+file.WriteLine "kell jelenteni. Amennyiben ennek során jogi képviselővel jár el, vagy"
+file.WriteLine "egyszerűsített változásbejegyzési eljárást kérelmezve nyújtja be a"
+file.WriteLine "módosított létesítő </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">okiratot,"
+file.WriteLine "a változásbejegyzési kérelem kizárólag elektronikus formában"
+file.WriteLine "terjeszthető elő.</FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT COLOR=""#222222""><FONT SIZE=3 STYLE=""font-size: 11pt"">Tájékoztatom"
+file.WriteLine "továbbá, hogy a 2013. évi CLXXVII. törvény (Ptké.) 11. &sect;-ának"
+file.WriteLine "(1)-(5) bekezdéseiben foglaltak alapján a Ptk. hatálybalépésekor"
+file.WriteLine "nyilvántartásba bejegyzett, illetve a bejegyzés alatt álló egyesület"
+file.WriteLine "a </FONT></FONT><FONT COLOR=""#222222""><FONT SIZE=3 STYLE=""font-size: 11pt""><U>Ptk."
+file.WriteLine "hatálybalépését követő első létesítő okirat módosításával egyidejűleg"
+file.WriteLine "köteles a létesítő okiratának mindazon rendelkezését felülvizsgálni"
+file.WriteLine "és szükség szerint módosítani, amelyek nem felelnek meg a Ptk."
+file.WriteLine "szabályainak.</U></FONT></FONT><FONT COLOR=""#222222""><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+file.WriteLine "A civil szervezet létesítő okirat módosításának bírósági"
+file.WriteLine "nyilvántartásba vételét &ndash; legkésőbb azonban 2016. március 15."
+file.WriteLine "napját &ndash;követően csak a Ptk. rendelkezéseinek megfelelő"
+file.WriteLine "létesítő okirat alapján és a Ptk. rendelkezéseinek megfelelően"
+file.WriteLine "működhet. A létesítő okiratnak a Ptk. rendelkezéseinek megfelelő"
+file.WriteLine "módosítását változásbejegyzési kérelemként kell benyújtani a"
+file.WriteLine "bírósághoz. A módosított létesítő okirat nyilvántartásba vételéig, de"
+file.WriteLine "legkésőbb 2016. március 15-ig, a szervezet a régi Ptk. szerint"
+file.WriteLine "működhet. Amennyiben a civil szervezet a Ptk. rendelkezéseinek"
+file.WriteLine "alkalmazásával módosítja létesítő okiratát, erre a változásbejegyzési"
+file.WriteLine "kérelemben utalnia kell.</FONT></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+
+
+
+'keltezés
+
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">Budapest, " & intdatum & " napján</FONT></P>"
+
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "</P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">                             </FONT><FONT SIZE=3 STYLE=""font-size: 11pt"">"
+
+file.WriteLine "<B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Muhiné dr. Bajzáth Melinda</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>"
+file.WriteLine "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; főügyészségi ügyész</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>L.i.:</B></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt"">Kiadni:"
+file.WriteLine "</FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><SPAN STYLE=""background: #ffff00"">1-I."
+file.WriteLine "sz. int.</SPAN></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""> 1 pld-át"
+file.WriteLine "címnek, </FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><U>vétívvel</U></FONT></P>"
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""><B>Sc.:"
+file.WriteLine "</B></FONT><FONT SIZE=3 STYLE=""font-size: 11pt""><B>2015. 05. 10.</B></FONT></P>" ' & mez(16) &
+file.WriteLine "<P CLASS=""western"" ALIGN=JUSTIFY STYLE=""margin-bottom: 0cm""><FONT SIZE=3 STYLE=""font-size: 11pt""> </FONT></P>"
+file.WriteLine "<DIV TYPE=FOOTER>"
+file.WriteLine "    <P STYLE=""margin-bottom: 0cm""><BR>"
+file.WriteLine "    </P>"
+file.WriteLine "</DIV>"
+file.WriteLine "</BODY>"
+file.WriteLine "</HTML>"
+
+
+
+
+
+file.WriteLine ""
+file.WriteLine ""
+
+
+
+
+
+file.Close
+
+
+Set fso = Nothing
+Set file = Nothing
+
+End If
+
+End Sub
+
+Sub mukodj_Click()
+
+Dim rs As DAO.Recordset
+Dim strSQL As String
+Dim szam As Double
+Dim megvan As Boolean
+ReDim mez(28) As String
+Dim betolt As String
+Dim fasz As String
+Dim fso As Object
+Set fso = CreateObject("Scripting.FileSystemObject")
+Dim nincs As Object
+Dim kep As Object
+
+
+
+
+szambe.SetFocus
+If szambe.Text = "" Then
+MsgBox ("Nem írtál be számot!!! most jól hibaüznetet fog dobni Kattintsál az End-re !")
+End If
+
+szam = szambe.Text
+'MsgBox (szam)
+
+strSQL = "SELECT * FROM Civil_adatbazis"  'WHERE Ügyszám (saját)"" =""" & szam & """
+
+Set rs = CurrentDb.OpenRecordset(strSQL)
+
+
+rs.MoveFirst
+
+While Not rs.EOF
+
+If rs.Fields(1).Value = szam Then
+megvan = True
+
+i = 0
+While i < 29
+
+
+If rs.Fields(i) = "" Then
+fasz = Str(rs.Fields(i).Value)
+mez(i) = fasz
+
+MsgBox ("kaki")
+End If
+
+
+
+If rs.Fields(i).Value <> "" Then
+
+mez(i) = rs.Fields(i).Value
+'MsgBox (rs.Fields(i).Value)
+'MsgBox ("másik kaki")
+mez(i) = rs.Fields(i).Value
+
+
+End If
+
+
+'MsgBox (mez(i))
+i = i + 1
+Wend
+
+   
+    szervezetneve.SetFocus
+    szervezetneve.Text = rs.Fields(3).Value
+    
+    intezkedes.SetFocus
+    intezkedes.Text = rs.Fields(17).Value
+    
+    
+    teendok.SetFocus
+    teendok.Text = rs.Fields(23).Value
+    
+    
+    
+    If rs.Fields(3).Value Like "*közh*" Then 'kétpontosok
+        
+        If rs.Fields(4).Value Like "T*" Then  'kétponos egyesület
+      
+            tipus.SetFocus
+            tipus.Text = "nevében közhasznú egyesület"
+        Else 'kétpontos alapítvány
+            tipus.SetFocus
+            tipus.Text = "nevében közhasznú alapítvány"
+        End If
+        
+        
+    Else 'egypontosok
+        If rs.Fields(4).Value Like "T*" Then
+            tipus.SetFocus
+            tipus.Text = "egyesület"
+        Else
+        
+            tipus.SetFocus
+            tipus.Text = "alapítvány"
+        End If
+    
+    End If
+    
+    
+     ezmegvan.SetFocus
+         
+        
+        If rs.Fields(17).Value = rs.Fields(23).Value Then
+            
+               
+        ezmegvan.Text = "EZ már kiment, mást kéne csinálni"
+        Else
+        ezmegvan.Text = ""
+            
+        End If
+        
+
+End If
+
+
+
+rs.MoveNext
+If megvan = False Then
+
+If rs.EOF = True Then
+MsgBox ("nincs ilyen szám")
+End If
+
+End If
+
+Wend
+
+If megvan = True Then
+If mez(7) <> "" Then
+mez(7) = Format(CDate(mez(7)), "Long Date")
+End If
+
+                If mez(8) <> "" Then
+               
+                mez(8) = Format(CDate(mez(8)), "Long Date")
+               ' Else
+                'hibás a kóóóód
+               ' MsgBox ("Ebben még nem jogerős a törlő végzés !!!!!" & Chr$(13) & Chr$(13) & "Ezért nem csinálok semmit")
+                End If
+                
+                
+                
+If mez(16) <> Null Then
+mez(16) = Format(CDate(mez(16)), "Long Date")
+End If
+If mez(18) <> Null Then
+mez(18) = Format(CDate(mez(18)), "Long Date")
+End If
+If mez(19) <> Null Then
+mez(19) = Format(CDate(mez(19)), "Long Date")
+End If
+If mez(22) <> Null Then
+mez(22) = Format(CDate(mez(22)), "Long Date")
+End If
+'MsgBox (mez(28))
+
+If fso.FolderExists("d:\Users\PappD\Documents\ügyek\2015\" & mez(1)) = False Then
+Set nincs = fso.CreateFolder("d:\Users\PappD\Documents\ügyek\2015\" & mez(1))
+
+End If
+
+fso.CopyFile "D:\fejlec.png", "D:\Users\PappD\Documents\ügyek\2015\" & mez(1) & "\", True    ', true)
+End If
+
+If mez(26) = True Then
+Me![kep].Picture = "d:\Users\PappD\Documents\ügyek\körleveles doksik eredeteije\van.png"
+'MsgBox ("van")
+
+Else
+Me![kep].Picture = "d:\Users\PappD\Documents\ügyek\körleveles doksik eredeteije\nincs.png"
+'MsgBox ("nincs")
+
+End If
+
+datum.SetFocus
+intdatum = datum.Text
+
+
+
+
+vmi = DateAdd("d", 45, intdatum)
+vmi = Format(CDate(vmi), "Long Date")
+'MsgBox (Len(vmi))
+
+'scontromez.SetFocus
+
+'scontromez.Text = vmi
+datum.SetFocus
+intdatum = Format(CDate(datum.Text), "Long Date")
+
+'MsgBox (intdatum)
+
+End Sub
+
+Sub Parancsgomb20_Click()
+
+MsgBox (mez(28) & "még nem megy!")
+
+
+
+
+
+
+End Sub
+
+Private Sub szambe_BeforeUpdate(Cancel As Integer)
+
+End Sub
+
+Sub teszt_Click()
+
+Dim n As Integer
+n = 1
+
+For n = 1 To 10
+
+If n Mod 2 = 0 Then
+
+Me![kep].Picture = "d:\Users\PappD\Documents\ügyek\körleveles doksik eredeteije\van.png"
+MsgBox ("van")
+
+Else
+Me![kep].Picture = "d:\Users\PappD\Documents\ügyek\körleveles doksik eredeteije\nincs.png"
+
+
+MsgBox ("nincs")
+End If
+
+Next
+'For n = 1 To 10
+' If n Mod 2 = 0 Then
+
+
+
+'Else
+'Me.Picture = "d:\Users\PappD\Documents\ügyek\körleveles doksik eredeteije\nincs.png"
+
+'MsgBox ("nincs")
+
+'End If
+'n = n + 1
+'Next
+
+End Sub
+
+
+
+Function ReportFileStatus(filespec) As Boolean 'létezik-e a fájl funció
+   Dim letezik As Boolean
+   
+   Dim fso As Object
+   Set fso = CreateObject("Scripting.FileSystemObject")
+   If (fso.FileExists(filespec)) Then
+     ReportFileStatus = True
+     
+   Else
+     ReportFileStatus = False
+     
+   End If
+
+End Function
 
